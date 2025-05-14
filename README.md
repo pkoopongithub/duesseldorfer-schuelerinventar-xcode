@@ -67,13 +67,11 @@ Open source personality inventory Since 2012, the Düsseldorf school inventory, 
 
 #The calibration sample is made up of students from the German education system with German language skills. A translation of the items formulated in German into another language only makes sense if a new calibration sample is drawn for this language and the educational system there.
 
-Die Algorithmisch rekursive Sequenzanalyse ist das einzige mir bekannte objektiv hermeneutische Verfahren, das vollständig ohne esoterische Tiefenhermeneutik auskommt, algorithmisch, evolutionär und memetisch ausgerichtet ist und einen Grammatikinduktor (Scheme) , einen Parser (Pascal) und einen Grammatiktransduktur (Lisp) bietet. 
 
 Das Düsseldorfer Schülerinventar ist das einzige mir bekannte quelloffene, valide, reliable und objektive Verfahren, dessen Quellen und Quellcodes überschaubar und nachvollziehbar nachprogrammierbar sind.
 
 Ich freue mich über Erben, die die Verfahren aufgreifen, nachprogrammieren und/oder für Eigenentwicklungen davon inspirieren lassen.
 
-The algorithmic recursive sequence analysis is the only objective hermeneutic method known to me that does not require any esoteric deep hermeneutics, is algorithmically, evolutionarily and memetically oriented and offers a grammar inductor (Scheme), a parser (Pascal) and a grammar transductor (Lisp).
 
 The Düsseldorf student inventory is the only open-source, valid, reliable and objective method that I know of, whose sources and source codes are clear and understandable and can be reprogrammed.
 
