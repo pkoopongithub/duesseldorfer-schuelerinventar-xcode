@@ -4,78 +4,80 @@ Xamarin iOS/Android
 
 # duesseldorfer-schuelerinventar
 GERMAN
-Quelloffenes Persönlichkeitsinventar
+Quelloffenes PersÃ¶nlichkeitsinventar
 
-Seit 2012 dient das quelloffene Düsseldorfer Schülerinventar als Lernumgebung für Studenten der Sozialwissenschaften und Auszubildende der 
+Seit 2012 dient das quelloffene DÃ¼sseldorfer SchÃ¼lerinventar als Lernumgebung fÃ¼r Studenten der Sozialwissenschaften und Auszubildende der 
 Markt- und Sozialforschung, der Anwendungsentwicklung und der Daten- und Prozessanalyse.
 
-Das Düsseldorfer Schülerinventar ist ein offenes, gültiges, genaues und unabhängiges Persönlichkeitsinventar für Schüler 
-der Übergangsklassen (valide, reliabel, objektiv). Das Düsseldorfer Schülerinventar ist entwicklungsoffen. 
-Wenn Sie an einem Open-Source-Projekt mitwirken, kennen Sie das intensive, persönliche Engagement, das zum Gelingen beiträgt. 
-Viele Nutzer wissen und schätzen das. Aus der eigenen Kraft der Entwickler gelingt aber nicht alles, 
+Das DÃ¼sseldorfer SchÃ¼lerinventar ist ein offenes, gÃ¼ltiges, genaues und unabhÃ¤ngiges PersÃ¶nlichkeitsinventar fÃ¼r SchÃ¼ler 
+der Ãœbergangsklassen (valide, reliabel, objektiv). Das DÃ¼sseldorfer SchÃ¼lerinventar ist entwicklungsoffen. 
+Wenn Sie an einem Open-Source-Projekt mitwirken, kennen Sie das intensive, persÃ¶nliche Engagement, das zum Gelingen beitrÃ¤gt. 
+Viele Nutzer wissen und schÃ¤tzen das. Aus der eigenen Kraft der Entwickler gelingt aber nicht alles, 
 zumal vielfach nur das pure Interesse am Thema oder der Umgang mit Technologien die Basis abgibt. 
-Nicht jeder Nutzer verfügt jedoch über die Fähigkeiten und die Zeit, um ein Projekt zu unterstützen. 
-Verbales Feedback in Form von Fehlermeldungen ist sehr hilfreich. Für andere kann eine materielle Unterstützung die einzige Möglichkeit sein, 
-sich an Open Source zu beteiligen. Gerne spreche ich mit Ihnen über Ihre Art der Unterstützung.
+Nicht jeder Nutzer verfÃ¼gt jedoch Ã¼ber die FÃ¤higkeiten und die Zeit, um ein Projekt zu unterstÃ¼tzen. 
+Verbales Feedback in Form von Fehlermeldungen ist sehr hilfreich. FÃ¼r andere kann eine materielle UnterstÃ¼tzung die einzige MÃ¶glichkeit sein, 
+sich an Open Source zu beteiligen. Gerne spreche ich mit Ihnen Ã¼ber Ihre Art der UnterstÃ¼tzung.
 
-Ich freue mich über wissenschaftliche Reanalysen und weitere Entwicklungsteams. Gerne stelle ich zu wissenschaftlichen 
-Zwecken die SPSS- und R-Dateien zur Verfügung. Zur Weiterentwicklung stelle ich gerne die Quellcodes der Programme zur Verfügung 
+Ich freue mich Ã¼ber wissenschaftliche Reanalysen und weitere Entwicklungsteams. Gerne stelle ich zu wissenschaftlichen 
+Zwecken die SPSS- und R-Dateien zur VerfÃ¼gung. Zur Weiterentwicklung stelle ich gerne die Quellcodes der Programme zur VerfÃ¼gung 
 (PHP, MySQL, Xcode, Android Studio, Xamarin, Lazarus).
 
-/duesseldorfer-schuelerinventar/
-+-- Controls/
-¦   +-- CompetenceResultCard.xaml
-¦   +-- NormTableEditor.xaml
-¦   +-- ProgressIndicatorControl.xaml
-+-- Converters/
-¦   +-- ScoreToColorConverter.cs
-+-- DüsseldorferSchülerinventar.iOS/
-+-- Models/
-¦   +-- CompetenceResult.cs
-¦   +-- NormTable.cs
-¦   +-- NormTableItem.cs
-¦   +-- Profile.cs
-¦   +-- QuestionItem.cs
-¦   +-- User.cs
-+-- Resources/
-¦   +-- Colors.xaml
-¦   +-- Styles.xaml
-+-- Services/
-¦   +-- AdminService.cs
-¦   +-- ApiService.cs
-¦   +-- DatabaseService.cs
-¦   +-- PreferencesService.cs
-+-- ViewModels/
-¦   +-- AdminViewModel.cs
-¦   +-- LoginViewModel.cs
-¦   +-- MainMenuViewModel.cs
-¦   +-- ProfileViewModel.cs
-¦   +-- QuestionnaireViewModel.cs
-+-- Views/
-    +-- AdminView.xaml
-    +-- AdminView.xaml.cs
-    +-- LoginView.xaml
-    +-- LoginView.xaml.cs
-    +-- MainMenuView.xaml
-    +-- MainMenuView.xaml.cs
-    +-- ProfileView.xaml
-    +-- ProfileView.xaml.cs
-    +-- QuestionnaireView.xaml
-    +-- QuestionnaireView.xaml.cs
+/duesseldorfer-schuelerinventar/<br>
++-- Controls/<br>
+Â¦   +-- CompetenceResultCard.xaml<br>
+Â¦   +-- NormTableEditor.xaml<br>
+Â¦   +-- ProgressIndicatorControl.xaml<br>
++-- Converters/<br>
+Â¦   +-- ScoreToColorConverter.cs<br>
++-- DÃ¼sseldorferSchÃ¼lerinventar.iOS/<br>
++-- Models/<br>
+Â¦   +-- CompetenceResult.cs<br>
+Â¦   +-- NormTable.cs<br>
+Â¦   +-- NormTableItem.cs<br>
+Â¦   +-- Profile.cs<br>
+Â¦   +-- QuestionItem.cs<br>
+Â¦   +-- User.cs<br>
++-- Resources/<br>
+Â¦   +-- Colors.xaml<br>
+Â¦   +-- Styles.xaml<br>
++-- Services/<br>
+Â¦   +-- AdminService.cs<br>
+Â¦   +-- ApiService.cs<br>
+Â¦   +-- DatabaseService.cs<br>
+Â¦   +-- PreferencesService.cs<br>
++-- ViewModels/<br>
+Â¦   +-- AdminViewModel.cs<br>
+Â¦   +-- LoginViewModel.cs<br>
+Â¦   +-- MainMenuViewModel.cs<br>
+Â¦   +-- ProfileViewModel.cs<br>
+Â¦   +-- QuestionnaireViewModel.cs<br>
++-- Views/<br>
+    +-- AdminView.xaml<br>
+    +-- AdminView.xaml.cs<br>
+    +-- LoginView.xaml<br>
+    +-- LoginView.xaml.cs<br>
+    +-- MainMenuView.xaml<br>
+    +-- MainMenuView.xaml.cs<br>
+    +-- ProfileView.xaml<br>
+    +-- ProfileView.xaml.cs<br>
+    +-- QuestionnaireView.xaml<br>
+    +-- QuestionnaireView.xaml.cs<br>
+
+
 
 ENGLISH
-Open source personality inventory Since 2012, the Düsseldorf school inventory, which is open source, has served as a learning environment for social science students and trainees at Market and social research, application development and data and process analysis. The Düsseldorf student inventory is an open, valid, precise and independent personality inventory for students of the transition classes (valid, reliable, objective). The Düsseldorf student inventory is open to development. If you are involved in an open source project, you know the intense, personal commitment that makes it a pleasure to succeed. Many users know and appreciate this. However, not everything can be achieved using the developers' own strength. especially since only the pure interest in the topic or the handling of technologies provides the basis. However, not every user has the skills and the time to support a project. Verbal feedback in the form of error messages is very helpful. For others, material support can be the only option participate in open source. I would be happy to talk to you about your type of support. I look forward to scientific reanalyses and further development teams. I am happy to provide scientific Purpose of the SPSS and R files available. I am happy to provide the source code of the program for further development (PHP, MySQL, Xcode, Android Studio, Xamarin, Lazarus). 
+Open source personality inventory Since 2012, the DÃ¼sseldorf school inventory, which is open source, has served as a learning environment for social science students and trainees at Market and social research, application development and data and process analysis. The DÃ¼sseldorf student inventory is an open, valid, precise and independent personality inventory for students of the transition classes (valid, reliable, objective). The DÃ¼sseldorf student inventory is open to development. If you are involved in an open source project, you know the intense, personal commitment that makes it a pleasure to succeed. Many users know and appreciate this. However, not everything can be achieved using the developers' own strength. especially since only the pure interest in the topic or the handling of technologies provides the basis. However, not every user has the skills and the time to support a project. Verbal feedback in the form of error messages is very helpful. For others, material support can be the only option participate in open source. I would be happy to talk to you about your type of support. I look forward to scientific reanalyses and further development teams. I am happy to provide scientific Purpose of the SPSS and R files available. I am happy to provide the source code of the program for further development (PHP, MySQL, Xcode, Android Studio, Xamarin, Lazarus). 
 
 #The calibration sample is made up of students from the German education system with German language skills. A translation of the items formulated in German into another language only makes sense if a new calibration sample is drawn for this language and the educational system there.
 
-Die Algorithmisch rekursive Sequenzanalyse ist das einzige mir bekannte objektiv hermeneutische Verfahren, das vollständig ohne esoterische Tiefenhermeneutik auskommt, algorithmisch, evolutionär und memetisch ausgerichtet ist und einen Grammatikinduktor (Scheme) , einen Parser (Pascal) und einen Grammatiktransduktur (Lisp) bietet. 
+Die Algorithmisch rekursive Sequenzanalyse ist das einzige mir bekannte objektiv hermeneutische Verfahren, das vollstÃ¤ndig ohne esoterische Tiefenhermeneutik auskommt, algorithmisch, evolutionÃ¤r und memetisch ausgerichtet ist und einen Grammatikinduktor (Scheme) , einen Parser (Pascal) und einen Grammatiktransduktur (Lisp) bietet.Â 
 
-Das Düsseldorfer Schülerinventar ist das einzige mir bekannte quelloffene, valide, reliable und objektive Verfahren, dessen Quellen und Quellcodes überschaubar und nachvollziehbar nachprogrammierbar sind.
+Das DÃ¼sseldorfer SchÃ¼lerinventar ist das einzige mir bekannte quelloffene, valide, reliable und objektive Verfahren, dessen Quellen und Quellcodes Ã¼berschaubar und nachvollziehbar nachprogrammierbar sind.
 
-Ich freue mich über Erben, die die Verfahren aufgreifen, nachprogrammieren und/oder für Eigenentwicklungen davon inspirieren lassen.
+Ich freue mich Ã¼ber Erben, die die Verfahren aufgreifen, nachprogrammieren und/oder fÃ¼r Eigenentwicklungen davon inspirieren lassen.
 
 The algorithmic recursive sequence analysis is the only objective hermeneutic method known to me that does not require any esoteric deep hermeneutics, is algorithmically, evolutionarily and memetically oriented and offers a grammar inductor (Scheme), a parser (Pascal) and a grammar transductor (Lisp).
 
-The Düsseldorf student inventory is the only open-source, valid, reliable and objective method that I know of, whose sources and source codes are clear and understandable and can be reprogrammed.
+The DÃ¼sseldorf student inventory is the only open-source, valid, reliable and objective method that I know of, whose sources and source codes are clear and understandable and can be reprogrammed.
 
 I am happy about heirs who take up the process, reprogram it and/or let it inspire them for their own developments.
