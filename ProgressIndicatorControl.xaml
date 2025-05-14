@@ -1,0 +1,18 @@
+<Grid xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      x:Class="DüsseldorferSchülerinventar.Controls.ProgressIndicatorControl"
+      ColumnDefinitions="Auto,*,Auto"
+      VerticalOptions="Center">
+    
+    <Label Text="{Binding CurrentQuestion}"
+           Style="{StaticResource ProgressNumberStyle}"
+           Grid.Column="0"/>
+    
+    <ProgressBar Progress="{Binding ProgressPercentage}"
+                 Style="{StaticResource QuestionnaireProgressBar}"
+                 Grid.Column="1"/>
+    
+    <Label Text="{Binding TotalQuestions}"
+           Style="{StaticResource ProgressNumberStyle}"
+           Grid.Column="2"/>
+</Grid>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:DüsseldorferSchülerinventar.ViewModels"
+             x:Class="DüsseldorferSchülerinventar.Views.MainMenuView"
+             Title="Hauptmenü"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ContentPage.BindingContext>
+        <viewmodel:MainMenuViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto,*,Auto"
+          Padding="20">
+        
+        <!-- Header -->
+        <Label Text="Düsseldorfer Schülerinventar"
+               Style="{StaticResource HeaderLabel}"
+               Grid.Row="0"/>
+
+        <!-- Main Buttons -->
+        <VerticalStackLayout Spacing="15"
+                             Grid.Row="1"
+                             VerticalOptions="Center">
+
+            <Button Text="Neuen Test starten"
+                    Command="{Binding NavigateToQuestionnaireCommand}"
+                    Style="{StaticResource PrimaryButton}"/>
+
+            <Button Text="Meine Profile anzeigen"
+                    Command="{Binding NavigateToProfileListCommand}"
+                    Style="{StaticResource PrimaryButton}"/>
+
+            <Button Text="Normtabellen verwalten"
+                    Command="{Binding NavigateToAdminCommand}"
+                    Style="{StaticResource PrimaryButton}"
+                    IsVisible="{Binding IsAdmin}"/>
+
+        </VerticalStackLayout>
+
+        <!-- Footer -->
+        <Button Text="Abmelden"
+                Command="{Binding LogoutCommand}"
+                Style="{StaticResource SecondaryButton}"
+                Grid.Row="2"/>
+
+    </Grid>
+
+</ContentPage>

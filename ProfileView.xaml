@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:DüsseldorferSchülerinventar.ViewModels"
+             xmlns:controls="clr-namespace:DüsseldorferSchülerinventar.Controls"
+             x:Class="DüsseldorferSchülerinventar.Views.ProfileView"
+             Title="Profilauswertung"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ContentPage.BindingContext>
+        <viewmodel:ProfileViewModel />
+    </ContentPage.BindingContext>
+
+    <RefreshView IsRefreshing="{Binding IsRefreshing}"
+                 Command="{Binding RefreshCommand}">
+        <ScrollView>
+            <Grid RowDefinitions="Auto,Auto,*,Auto"
+                  Padding="20"
+                  ColumnDefinitions="*,*">
+
+                <!-- Header -->
+                <Label Text="{Binding ProfileName}"
+                       Style="{StaticResource PageHeaderStyle}"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="0"/>
+
+                <!-- Test Info -->
+                <HorizontalStackLayout Spacing="10"
+                                       Grid.Row="1"
+                                       Grid.ColumnSpan="2">
+                    <Label Text="{Binding TestDate, StringFormat='Durchgeführt am: {0:d}'}"
+                           Style="{StaticResource InfoTextStyle}"/>
+                    <Label Text="{Binding TestDuration}"
+                           Style="{StaticResource InfoTextStyle}"/>
+                </HorizontalStackLayout>
+
+                <!-- Competence Results -->
+                <CollectionView ItemsSource="{Binding CompetenceResults}"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="2">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <controls:CompetenceResultCard />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Action Buttons -->
+                <Button Text="Bearbeiten"
+                        Command="{Binding EditCommand}"
+                        Style="{StaticResource PrimaryButton}"
+                        Grid.Row="3"
+                        Grid.Column="0"/>
+
+                <Button Text="Zurück"
+                        Command="{Binding BackCommand}"
+                        Style="{StaticResource SecondaryButton}"
+                        Grid.Row="3"
+                        Grid.Column="1"/>
+            </Grid>
+        </ScrollView>
+    </RefreshView>
+</ContentPage>

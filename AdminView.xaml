@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:DüsseldorferSchülerinventar.ViewModels"
+             xmlns:controls="clr-namespace:DüsseldorferSchülerinventar.Controls"
+             x:Class="DüsseldorferSchülerinventar.Views.AdminView"
+             Title="Admin-Bereich"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ContentPage.BindingContext>
+        <viewmodel:AdminViewModel />
+    </ContentPage.BindingContext>
+
+    <RefreshView IsRefreshing="{Binding IsBusy}"
+                 Command="{Binding LoadNormTablesCommand}">
+        <ScrollView>
+            <Grid RowDefinitions="Auto,Auto,*"
+                  Padding="20">
+
+                <!-- Header -->
+                <Label Text="Normtabellen-Verwaltung"
+                       Style="{StaticResource PageHeaderStyle}"
+                       Grid.Row="0"/>
+
+                <!-- Action Buttons -->
+                <HorizontalStackLayout Spacing="10"
+                                      Grid.Row="1">
+                    <Button Text="Aktualisieren"
+                            Command="{Binding LoadNormTablesCommand}"
+                            Style="{StaticResource SecondaryButton}"/>
+                    
+                    <Button Text="Speichern"
+                            Command="{Binding SaveNormTablesCommand}"
+                            Style="{StaticResource PrimaryButton}"/>
+                </HorizontalStackLayout>
+
+                <!-- Norm Tables Editor -->
+                <CollectionView ItemsSource="{Binding NormTables}"
+                               Grid.Row="2"
+                               Margin="0,20">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <controls:NormTableEditor />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+        </ScrollView>
+    </RefreshView>
+</ContentPage>

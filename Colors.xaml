@@ -1,0 +1,18 @@
+<!-- Fügen Sie diese Styles hinzu -->
+<Style x:Key="HeaderLabel" TargetType="Label">
+    <Setter Property="FontSize" Value="24"/>
+    <Setter Property="FontAttributes" Value="Bold"/>
+    <Setter Property="HorizontalOptions" Value="Center"/>
+    <Setter Property="Margin" Value="0,20"/>
+    <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+</Style>
+
+<Style x:Key="SecondaryButton" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="Transparent"/>
+    <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+    <Setter Property="BorderColor" Value="{StaticResource PrimaryColor}"/>
+    <Setter Property="BorderWidth" Value="2"/>
+    <Setter Property="CornerRadius" Value="8"/>
+    <Setter Property="HeightRequest" Value="50"/>
+    <Setter Property="Margin" Value="0,20"/>
+</Style>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:DüsseldorferSchülerinventar.ViewModels"
+             x:Class="DüsseldorferSchülerinventar.Views.LoginView"
+             Title="Anmelden"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ContentPage.BindingContext>
+        <viewmodel:LoginViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout 
+            Spacing="20"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <!-- App Logo -->
+            <Image
+                Source="logo.png"
+                HeightRequest="120"
+                HorizontalOptions="Center"
+                Aspect="AspectFit"/>
+
+            <!-- Username Field -->
+            <Entry
+                Placeholder="Benutzername"
+                Text="{Binding Username}"
+                Style="{StaticResource PrimaryEntry}">
+                <Entry.Behaviors>
+                    <toolkit:EventToCommandBehavior 
+                        EventName="Completed"
+                        Command="{Binding LoginCommand}"/>
+                </Entry.Behaviors>
+            </Entry>
+
+            <!-- Password Field -->
+            <Entry
+                Placeholder="Passwort"
+                Text="{Binding Password}"
+                IsPassword="True"
+                Style="{StaticResource PrimaryEntry}">
+                <Entry.Behaviors>
+                    <toolkit:EventToCommandBehavior 
+                        EventName="Completed"
+                        Command="{Binding LoginCommand}"/>
+                </Entry.Behaviors>
+            </Entry>
+
+            <!-- Login Button -->
+            <Button
+                Text="Anmelden"
+                Command="{Binding LoginCommand}"
+                Style="{StaticResource PrimaryButton}"
+                IsEnabled="{Binding IsNotBusy}"/>
+
+            <!-- Register Link -->
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Noch kein Konto? "/>
+                        <Span Text="Registrieren" 
+                              TextColor="{StaticResource PrimaryColor}"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    Command="{Binding NavigateToRegisterCommand}"/>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <!-- Activity Indicator -->
+            <ActivityIndicator
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                Color="{StaticResource PrimaryColor}"
+                HorizontalOptions="Center"/>
+
+            <!-- Error Message -->
+            <Label
+                Text="{Binding ErrorMessage}"
+                TextColor="{StaticResource ErrorColor}"
+                IsVisible="{Binding HasErrorMessage}"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

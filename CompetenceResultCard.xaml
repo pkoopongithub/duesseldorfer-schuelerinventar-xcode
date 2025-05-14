@@ -1,0 +1,31 @@
+<Frame xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="DüsseldorferSchülerinventar.Controls.CompetenceResultCard"
+       Padding="15"
+       Margin="0,5"
+       CornerRadius="10"
+       BackgroundColor="{DynamicResource CardBackgroundColor}">
+    
+    <Grid ColumnDefinitions="*,Auto"
+          RowDefinitions="Auto,Auto">
+        
+        <!-- Competence Name -->
+        <Label Text="{Binding Name}"
+               Style="{StaticResource CompetenceNameStyle}"
+               Grid.Column="0"
+               Grid.Row="0"/>
+        
+        <!-- Score -->
+        <Label Text="{Binding Score, StringFormat='{0}/5'}"
+               Style="{StaticResource CompetenceScoreStyle}"
+               Grid.Column="1"
+               Grid.Row="0"/>
+        
+        <!-- Progress Bar -->
+        <ProgressBar Progress="{Binding Percent}"
+                     Style="{StaticResource CompetenceProgressBar}"
+                     Grid.Column="0"
+                     Grid.Row="1"
+                     Grid.ColumnSpan="2"/>
+    </Grid>
+</Frame>

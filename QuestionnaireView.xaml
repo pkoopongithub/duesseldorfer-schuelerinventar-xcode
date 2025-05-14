@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:DüsseldorferSchülerinventar.ViewModels"
+             xmlns:controls="clr-namespace:DüsseldorferSchülerinventar.Controls"
+             x:Class="DüsseldorferSchülerinventar.Views.QuestionnaireView"
+             Title="Fragebogen"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ContentPage.BindingContext>
+        <viewmodel:QuestionnaireViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto,*,Auto,Auto"
+          Padding="10">
+        
+        <!-- Progress Indicator -->
+        <controls:ProgressIndicatorControl 
+            CurrentQuestion="{Binding CurrentQuestionIndex}"
+            TotalQuestions="{Binding Questions.Count}"
+            Grid.Row="0"/>
+
+        <!-- Question Carousel -->
+        <CarouselView ItemsSource="{Binding Questions}"
+                      CurrentItem="{Binding CurrentQuestion}"
+                      Loop="False"
+                      Grid.Row="1">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Spacing="20"
+                                         Padding="20,0">
+                        
+                        <!-- Question Text -->
+                        <Label Text="{Binding Text}"
+                               Style="{StaticResource QuestionTextStyle}"/>
+                        
+                        <!-- Answer Options -->
+                        <RadioButton GroupName="QuestionResponses"
+                                     Content="immer"
+                                     IsChecked="{Binding IsAnswer1Selected}"
+                                     Style="{StaticResource RadioButtonStyle}"/>
+                        
+                        <RadioButton GroupName="QuestionResponses"
+                                     Content="meistens"
+                                     IsChecked="{Binding IsAnswer2Selected}"
+                                     Style="{StaticResource RadioButtonStyle}"/>
+                        
+                        <RadioButton GroupName="QuestionResponses"
+                                     Content="selten"
+                                     IsChecked="{Binding IsAnswer3Selected}"
+                                     Style="{StaticResource RadioButtonStyle}"/>
+                        
+                        <RadioButton GroupName="QuestionResponses"
+                                     Content="nie"
+                                     IsChecked="{Binding IsAnswer4Selected}"
+                                     Style="{StaticResource RadioButtonStyle}"/>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <!-- Navigation Buttons -->
+        <Grid ColumnDefinitions="*,*"
+              ColumnSpacing="15"
+              Grid.Row="2">
+            <Button Text="Zurück"
+                    Command="{Binding PreviousQuestionCommand}"
+                    IsVisible="{Binding IsNotFirstQuestion}"
+                    Style="{StaticResource SecondaryButton}"
+                    Grid.Column="0"/>
+            
+            <Button Text="{Binding NextButtonText}"
+                    Command="{Binding NextQuestionCommand}"
+                    Style="{StaticResource PrimaryButton}"
+                    Grid.Column="1"/>
+        </Grid>
+
+        <!-- Loading Indicator -->
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           Color="{StaticResource PrimaryColor}"
+                           Grid.Row="3"/>
+    </Grid>
+</ContentPage>

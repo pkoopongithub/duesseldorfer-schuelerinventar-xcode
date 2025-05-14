@@ -1,0 +1,111 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    
+    <Color x:Key="PrimaryColor">#2E86AB</Color>
+    <Color x:Key="ErrorColor">#E83F3F</Color>
+    <Color x:Key="PageBackgroundColor">#F5F5F5</Color>
+
+    <Style x:Key="PrimaryEntry" TargetType="Entry">
+        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="PlaceholderColor" Value="#999"/>
+        <Setter Property="HeightRequest" Value="50"/>
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="White"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#FFF"/>
+                            <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PrimaryButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="HeightRequest" Value="50"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="Margin" Value="0,20"/>
+    </Style>
+
+<Style x:Key="QuestionTextStyle" TargetType="Label">
+    <Setter Property="FontSize" Value="18"/>
+    <Setter Property="FontAttributes" Value="Bold"/>
+    <Setter Property="Margin" Value="0,0,0,20"/>
+</Style>
+
+<Style x:Key="RadioButtonStyle" TargetType="RadioButton">
+    <Setter Property="FontSize" Value="16"/>
+    <Setter Property="Margin" Value="0,5"/>
+    <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+</Style>
+
+<Style x:Key="QuestionnaireProgressBar" TargetType="ProgressBar">
+    <Setter Property="ProgressColor" Value="{StaticResource PrimaryColor}"/>
+    <Setter Property="HeightRequest" Value="10"/>
+    <Setter Property="Margin" Value="10,0"/>
+</Style>
+
+<Style x:Key="PageHeaderStyle" TargetType="Label">
+    <Setter Property="FontSize" Value="22"/>
+    <Setter Property="FontAttributes" Value="Bold"/>
+    <Setter Property="HorizontalOptions" Value="Center"/>
+    <Setter Property="Margin" Value="0,0,0,20"/>
+</Style>
+
+<Style x:Key="InfoTextStyle" TargetType="Label">
+    <Setter Property="FontSize" Value="14"/>
+    <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+</Style>
+
+<Style x:Key="CompetenceNameStyle" TargetType="Label">
+    <Setter Property="FontSize" Value="16"/>
+    <Setter Property="FontAttributes" Value="Bold"/>
+</Style>
+
+<Style x:Key="CompetenceScoreStyle" TargetType="Label">
+    <Setter Property="FontSize" Value="16"/>
+    <Setter Property="FontAttributes" Value="Bold"/>
+    <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+</Style>
+
+<Style x:Key="CompetenceProgressBar" TargetType="ProgressBar">
+    <Setter Property="HeightRequest" Value="12"/>
+    <Setter Property="Margin" Value="0,10,0,0"/>
+    <Setter Property="ProgressColor" Value="{StaticResource PrimaryColor}"/>
+</Style>
+
+<Style x:Key="TableNameStyle" TargetType="Label">
+    <Setter Property="FontSize" Value="16"/>
+    <Setter Property="FontAttributes" Value="Bold"/>
+    <Setter Property="VerticalOptions" Value="Center"/>
+</Style>
+
+<Style x:Key="PercentileInfoStyle" TargetType="Label">
+    <Setter Property="FontSize" Value="12"/>
+    <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+    <Setter Property="VerticalOptions" Value="Center"/>
+    <Setter Property="HorizontalOptions" Value="End"/>
+</Style>
+
+<Style x:Key="PercentileInputStyle" TargetType="Entry">
+    <Setter Property="Keyboard" Value="Numeric"/>
+    <Setter Property="HorizontalOptions" Value="Fill"/>
+    <Setter Property="HorizontalTextAlignment" Value="Center"/>
+    <Setter Property="BackgroundColor" Value="White"/>
+    <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryTextColor}"/>
+</Style>
+
+</ResourceDictionary>

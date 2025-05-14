@@ -1,0 +1,56 @@
+<Frame xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="DüsseldorferSchülerinventar.Controls.NormTableEditor"
+       Padding="15"
+       Margin="0,5"
+       CornerRadius="10"
+       BackgroundColor="{DynamicResource CardBackgroundColor}">
+    
+    <Grid RowDefinitions="Auto,Auto"
+          ColumnDefinitions="*,*">
+        
+        <!-- Table Name -->
+        <Label Text="{Binding Name}"
+               Style="{StaticResource TableNameStyle}"
+               Grid.Column="0"
+               Grid.Row="0"/>
+        
+        <!-- Percentile Info -->
+        <Label Text="{Binding PercentileDescription}"
+               Style="{StaticResource PercentileInfoStyle}"
+               Grid.Column="1"
+               Grid.Row="0"/>
+        
+        <!-- Percentile Inputs -->
+        <Grid ColumnDefinitions="*,*,*,*,*"
+              ColumnSpacing="5"
+              Grid.Row="1"
+              Grid.ColumnSpan="2">
+            
+            <Entry Text="{Binding P1, StringFormat='{0:F1}'}"
+                   Placeholder="P20"
+                   Style="{StaticResource PercentileInputStyle}"
+                   Grid.Column="0"/>
+            
+            <Entry Text="{Binding P2, StringFormat='{0:F1}'}"
+                   Placeholder="P40"
+                   Style="{StaticResource PercentileInputStyle}"
+                   Grid.Column="1"/>
+            
+            <Entry Text="{Binding P3, StringFormat='{0:F1}'}"
+                   Placeholder="P60"
+                   Style="{StaticResource PercentileInputStyle}"
+                   Grid.Column="2"/>
+            
+            <Entry Text="{Binding P4, StringFormat='{0:F1}'}"
+                   Placeholder="P80"
+                   Style="{StaticResource PercentileInputStyle}"
+                   Grid.Column="3"/>
+            
+            <Entry Text="{Binding P5, StringFormat='{0:F1}'}"
+                   Placeholder="P100"
+                   Style="{StaticResource PercentileInputStyle}"
+                   Grid.Column="4"/>
+        </Grid>
+    </Grid>
+</Frame>
