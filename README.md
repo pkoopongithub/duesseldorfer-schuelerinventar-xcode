@@ -1,7 +1,4 @@
 
-# duesseldorfer-schuelerinventar-xamarin
-Xamarin iOS/Android
-
 # duesseldorfer-schuelerinventar
 GERMAN
 Quelloffenes Persönlichkeitsinventar
